@@ -4,9 +4,88 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+a{
+    text-decoration: none;
+}
 
 li{
     list-style-type: none;
+}
+
+p{
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.title{
+    font-size: 120px;
+    margin-bottom: 12px;
+    text-align: left;
+    line-height: 1;
+}
+
+.purple {
+    color: rgb(147, 92, 192);
+}
+
+
+section{
+    background-color: rgb(245, 245, 245);
+}
+
+.click{
+    transition: all 60ms;
+}
+
+.click:hover{
+    transform: scale(1.1);
+}
+
+.click:active{
+    transform: scale(0.8);
+}
+
+/* LANDING */
+
+#landing-page{
+    min-height: 100vh;
+}
+
+.header{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 30px;
+}
+
+.header__para{
+    font-size: 24px;
+    line-height: 2;
+    max-width: 500px;
+}
+
+.social__list{
+    margin-top: 16px;
+    display: flex;
+
+}
+
+.social__link{
+    background-color: rgb(147, 92, 192);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    margin-right: 12px;
+    border-radius: 50%;
+
 }
 
 /* NAVIGATION */
@@ -19,6 +98,7 @@ nav{
     max-width: 1200px;
     margin: 0 auto;
     height: 100px;
+    padding: 0 20px;
 }
 
 .nav__link--list{
@@ -30,7 +110,6 @@ nav{
 }
 
 .nav__link--anchor{
-    text-decoration: none;
     font-size: 16px;
     color: #242424;
     font-weight: 700;
