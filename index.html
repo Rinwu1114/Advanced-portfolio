@@ -12,12 +12,24 @@
       src="https://kit.fontawesome.com/7750fa037a.js"
       crossorigin="anonymous"
     ></script>
+    <script src="app.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "WSMPI8n1cVi-6L52d",
+        });
+      })();
+    </script>
   </head>
   <body>
     <section id="landing-page">
       <nav>
         <figure>
-          <button class="logo__btn click">
+          <button class="logo__btn click" onclick="toggleModal()">
             <i class="fa-solid fa-r nav__logo"></i
             ><i class="fa-solid fa-w nav__logo"></i>
           </button>
@@ -37,7 +49,7 @@
               >Projects</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -61,7 +73,7 @@
           <p class="header__para">
             Lorem ipsum dolor sit <b class="purple">amet.</b>
             <br />
-            Here's a bit more <b class="purple">about me.</b>
+            Here's a bit more <b class="purple click" onclick="toggleModal()">about me.</b>
           </p>
           <div class="social__list">
             <a
@@ -84,12 +96,61 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click">
+      <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope"></i>
       </button>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me.
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Job title</h4>
+          <p class="modal__para">about paragraph</p>
+          <div class="modal__languages">
+            <figure>
+              <img src="" alt="" />
+              <span class="language__name"></span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+            <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()"></i>
+          <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+          <h3 class="modal__sub-title modal__sub-title--contact">
+            I'd love to hear from you.
+          </h3>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" name="user_name" type="text" required />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" name="user_email" type="email" required />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea
+                class="input"
+                name="user_message"
+                type="text"
+                required
+              ></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">Send it</button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-circle-notch"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for reaching out! Looking forward to speaking to you soon!
+          </div>
+        </div>
+      </div>
     </section>
     <section id="projects">
       <div class="row">
@@ -165,31 +226,19 @@
             <a href="#" class="footer__logo">
               <i class="fa-solid fa-r footer__logo"></i
               ><i class="fa-solid fa-w footer__logo"></i>
-              </a>
+            </a>
           </figure>
           <div class="footer__social--list">
-            <a
-              href="#"
-              class="footer__social--link link__hover-effect"
-            >
+            <a href="#" class="footer__social--link link__hover-effect">
               GitHub
             </a>
-            <a
-              href="#"
-              class="footer__social--link link__hover-effect"
-            >
+            <a href="#" class="footer__social--link link__hover-effect">
               Linkedin
             </a>
-            <a
-              href="#"
-              class="footer__social--link link__hover-effect"
-            >
+            <a href="#" class="footer__social--link link__hover-effect" onclick="toggleModal()">
               Contact
             </a>
-            <a
-              href="#"
-              class="footer__social--link link__hover-effect"
-            >
+            <a href="#" class="footer__social--link link__hover-effect">
               Resume
             </a>
           </div>
