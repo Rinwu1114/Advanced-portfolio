@@ -61,7 +61,10 @@
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
             >
-              <i class="fa-solid fa-circle-half-stroke" onclick="toggleContrast()"></i>
+              <i
+                class="fa-solid fa-circle-half-stroke"
+                onclick="toggleContrast()"
+              ></i>
             </a>
           </li>
         </ul>
@@ -73,7 +76,8 @@
           <p class="header__para">
             Lorem ipsum dolor sit <b class="purple">amet.</b>
             <br />
-            Here's a bit more <b class="purple click" onclick="toggleModal()">about me.</b>
+            Here's a bit more
+            <b class="purple click" onclick="toggleModal()">about me.</b>
           </p>
           <div class="social__list">
             <a
@@ -96,9 +100,11 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click" onclick="toggleModal()">
-        <i class="fa-solid fa-envelope"></i>
-      </button>
+      <a href="#">
+        <button class="mail__btn click" onclick="toggleModal()">
+          <i class="fa-solid fa-envelope"></i>
+        </button>
+      </a>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
@@ -107,8 +113,7 @@
           <h3 class="modal__title modal__title--about">
             Here's a bit about me.
           </h3>
-          <h4 class="modal__sub-title modal__sub-title--about">
-            Job title</h4>
+          <h4 class="modal__sub-title modal__sub-title--about">Job title</h4>
           <p class="modal__para">about paragraph</p>
           <div class="modal__languages">
             <figure>
@@ -118,7 +123,10 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
-            <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()"></i>
+          <i
+            class="fa-solid fa-xmark modal__exit click"
+            onclick="toggleModal()"
+          ></i>
           <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
           <h3 class="modal__sub-title modal__sub-title--contact">
             I'd love to hear from you.
@@ -151,15 +159,24 @@
           </div>
         </div>
       </div>
-      <img src="assets/snowflake-snow-svgrepo-com (1).svg" class="shape shape--0">
-      <img src="assets/snowflake-snow-svgrepo-com (2).svg" class="shape shape--1">
-      <img src="assets/snowflake-snow-svgrepo-com (3).svg" class="shape shape--2">
-      <img src="assets/snowflake-snow-svgrepo-com.svg" class="shape shape--3">
-      <img src="assets/snowflake-svgrepo-com (1).svg" class="shape shape--4">
-      <img src="assets/snowflake-svgrepo-com (2).svg" class="shape shape--5">
-      <img src="assets/snowflake-svgrepo-com (3).svg" class="shape shape--6">
-      <img src="assets/snowflake-svgrepo-com (4).svg" class="shape shape--7">
-      <img src="assets/snowflake-svgrepo-com.svg" class="shape shape--8">
+      <img
+        src="assets/snowflake-snow-svgrepo-com (1).svg"
+        class="shape shape--0"
+      />
+      <img
+        src="assets/snowflake-snow-svgrepo-com (2).svg"
+        class="shape shape--1"
+      />
+      <img
+        src="assets/snowflake-snow-svgrepo-com (3).svg"
+        class="shape shape--2"
+      />
+      <img src="assets/snowflake-snow-svgrepo-com.svg" class="shape shape--3" />
+      <img src="assets/snowflake-svgrepo-com (1).svg" class="shape shape--4" />
+      <img src="assets/snowflake-svgrepo-com (2).svg" class="shape shape--5" />
+      <img src="assets/snowflake-svgrepo-com (3).svg" class="shape shape--6" />
+      <img src="assets/snowflake-svgrepo-com (4).svg" class="shape shape--7" />
+      <img src="assets/snowflake-svgrepo-com.svg" class="shape shape--8" />
     </section>
     <section id="projects">
       <div class="row">
@@ -244,7 +261,11 @@
             <a href="#" class="footer__social--link link__hover-effect">
               Linkedin
             </a>
-            <a href="#" class="footer__social--link link__hover-effect" onclick="toggleModal()">
+            <a
+              href="#"
+              class="footer__social--link link__hover-effect"
+              onclick="toggleModal()"
+            >
               Contact
             </a>
             <a href="#" class="footer__social--link link__hover-effect">
